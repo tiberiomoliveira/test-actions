@@ -38,6 +38,7 @@ jobs:
         bash test.sh
     - name: Test makefile with env SHELL
       run: |
+        env
         SHELL=/usr/bin/bash make all
     - name: Test makefile with bash shell
       shell: bash
