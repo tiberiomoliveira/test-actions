@@ -36,10 +36,12 @@ jobs:
     - name: Test script
       run: |
         bash test.sh
+    - name: Test makefile by setting SHELL
+      run: |
+        export SHELL=/usr/bin/bash && make all && unset SHELL
     - name: Test makefile with env SHELL
       run: |
-        env
-        SHELL=/usr/bin/bash make all
+        SHELL='/usr/bin/bash' make all
     - name: Test makefile with bash shell
       shell: bash
       run: |
