@@ -36,3 +36,13 @@ jobs:
     - name: Test script
       run: |
         bash test.sh
+    - name: Test makefile with env SHELL
+      run: |
+        SHELL=/usr/bin/bash make all
+    - name: Test makefile with bash shell
+      shell: bash
+      run: |
+        make all
+    - name: Test makefile
+      run: |
+        make all
