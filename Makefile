@@ -1,7 +1,7 @@
 all:
 	env
-	echo "SHELL ENV: $SHELL $NAME"
+	echo "SHELL ENV:" $(SHELL) $(NAME)
 	python3.10 -m venv mk_venv
 	source mk_venv/bin/activate
-	echo "VIRTUAL ENV:" $VIRTUAL_ENV
+	echo "VIRTUAL ENV:" $(VIRTUAL_ENV)
 	deactivate
